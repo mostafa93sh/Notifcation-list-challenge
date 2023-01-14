@@ -1,0 +1,205 @@
+:root {
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  /*--------------------------------------------*/
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue-1: hsl(210, 60%, 98%);
+  --very-light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.main-container {
+  background-color: var(--very-light-grayish-blue-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.main-container .container {
+  width: 600px;
+  height: 80%;
+  background-color: white;
+  box-shadow: 0px 0px 20px #ccc;
+  border-radius: 7px;
+  padding: 20px 8px;
+}
+.main-container .container .main-heading {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.main-container .container .main-heading .notifications-num {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 133px;
+  width: 25px;
+  height: 25px;
+  background-color: var(--blue);
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+}
+/* .main-container .container .main-heading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-color: var(--blue);
+  border-radius: 5px;
+} */
+.main-container .container .main-heading p {
+  font-size: 1rem;
+  color: var(--grayish-blue);
+}
+.main-container .container .main-heading p:hover {
+  cursor: pointer;
+  color: var(--blue);
+}
+.main-container .container .unread-notifications {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: flex-start;
+  margin: 10px 0;
+  padding: 10px 0;
+  /* padding-top: 10px; */
+  border-radius: 5px;
+  background-color: var(--very-light-grayish-blue-1);
+}
+.main-container .container .unread-notifications .image {
+  width: 50px;
+  height: 50px;
+  margin: 0 20px;
+}
+.main-container .container .unread-notifications .image img {
+  max-width: 100%;
+}
+.main-container .container .unread-notifications .person-info {
+  /* margin: 0 10px; */
+  margin: 0 15px;
+}
+.main-container
+  .container
+  .unread-notifications
+  .person-info
+  .notifications-info {
+  font-size: 0.91rem;
+  font-weight: 200;
+  width: 100%;
+  position: relative;
+}
+.main-container
+  .container
+  .unread-notifications
+  .person-info
+  .notifications-info
+  span {
+  font-size: 0.81rem;
+  font-weight: 200;
+  width: 100%;
+  margin-left: 9px;
+  color: var(--grayish-blue);
+}
+.main-container .container .unread-notifications .person-info .red-dot::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--red);
+  top: 8px;
+  right: -8px;
+}
+/* .main-container
+  .container
+  .unread-notifications
+  .person-info
+  .notifications-info
+  span:last-child::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--red);
+  top: 0;
+  right: -20px;
+} */
+.main-container
+  .container
+  .unread-notifications
+  .person-info
+  .notifications-info
+  span:nth-child(2) {
+  font-size: 0.87rem;
+  color: black;
+}
+.main-container
+  .container
+  .unread-notifications
+  .person-info
+  .notifications-info
+  span:nth-child(2):hover {
+  cursor: pointer;
+  color: var(--blue);
+}
+.main-container .container .unread-notifications .person-info p:nth-child(2) {
+  font-size: 0.75rem;
+  color: var(--grayish-blue);
+}
+/* .main-container .container .unread-notifications .action {
+  width: 100%;
+}
+.main-container .container .unread-notifications .action p {
+  font-size: 0.88rem;
+  font-weight: 200;
+  color: var(--grayish-blue);
+}
+.main-container .container .unread-notifications .action p span {
+  font-weight: 500;
+  color: var(--very-dark-blue);
+} */
+.main-container .container .unread-notifications:nth-child(5) {
+  background-color: var(--white);
+  position: relative;
+}
+
+.main-container .container .unread-notifications:nth-child(5) .message {
+  position: absolute;
+  top: 61px;
+  right: 9px;
+  width: 80%;
+  height: 70px;
+  background-color: white;
+  /* opacity: 0.7; */
+  font-size: 0.81rem;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px #ccc;
+  color: var(--grayish-blue);
+}
+.main-container .container .unread-notifications:nth-child(6) {
+  margin-top: 90px;
+}
+.bg-white {
+  background-color: var(--white) !important;
+}
+.main-container
+  .container
+  .unread-notifications:last-child
+  .person-info
+  .notifications-info
+  span:nth-child(2) {
+  color: var(--blue);
+  font-weight: bold;
+}
